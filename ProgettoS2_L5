@@ -1,0 +1,94 @@
+#include <stdio.h>
+
+void menu ();
+void moltiplica ();
+void dividi ();
+void ins_string();
+
+
+int main () 
+
+{
+	char scelta = {'\0'};                                           
+	menu ();
+	scanf ("%c", &scelta);                                  //modifica da %d a %c
+
+	switch (scelta)
+	{
+		case 'A':
+                case 'a':                                       // aggiunta del caso 'a'
+		moltiplica();
+		break;
+
+		case 'B':
+                case 'b':                                       // aggiunta del caso 'b'
+                dividi();
+                break;
+
+		case 'C':
+                case 'c':                                       // aggiunta del caso 'c'
+                ins_string();
+                break;
+
+                default:                                        //aggiunta della riga default
+                printf("Errore inserire una scelta valida");
+                
+	}
+
+return 0;
+
+}
+
+
+void menu ()
+{
+        printf ("Benvenuto, sono un assitente digitale, posso aiutarti a sbrigare alcuni compiti\n");
+        printf ("Come posso aiutarti?\n");
+	printf ("A >> Moltiplicare due numeri\nB >> Dividere due numeri\nC >> Inserire una stringa\n");
+
+}
+
+
+void moltiplica ()
+{
+	int  a,b = 0;                                               // modifica da "short int" a "int"    
+	printf ("Inserisci i due numeri da moltiplicare:");
+	scanf ("%d", &a);                                            // modifica da "%f" a "%d" 
+	scanf ("%d", &b);
+
+	int prodotto = a * b;                                        // modifica da "short int" a "int"
+
+	printf ("Il prodotto tra %d e %d e': %d\n", a,b,prodotto);
+}
+
+
+void dividi ()
+{
+        int  a,b = 0;                             
+        printf ("Inserisci il numeratore:");
+        scanf ("%d", &a);
+	printf ("Inserisci il denumeratore:");
+        scanf ("%d", &b);
+
+        if(b==0) {                                                 // aggiunta di if b==0
+        printf ("Impossibbile fare una divisione per zero\n");     // aggiunta di printf
+        }  
+
+        else {                                                     // aggiunta di else
+        float divisione = (float)a / (float)b;                     // modifica da "int divisione" a "float divisione" e modifa da "%" a "/"
+        
+        printf ("La divisione tra %d e %d e': %.2f", a,b,divisione);  //modifica da "%d" a "%.2f"
+        }
+}
+
+
+
+
+
+void ins_string () 
+{
+	char stringa[10];
+        printf ("Inserisci la stringa: ");
+        scanf ("%9s", stringa);                               //modifica da "&stringa" a "stringa"
+        printf("Hai inserito: %s\n", stringa); 
+}
