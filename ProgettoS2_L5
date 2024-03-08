@@ -31,7 +31,7 @@ int main ()
                 break;
 
                 default:                                        //aggiunta della riga default
-                printf("Errore inserire una scelta valida");
+                printf("Scelta non disponibile chiusura del programma");
                 
 	}
 
@@ -67,11 +67,11 @@ void dividi ()
         int  a,b = 0;                             
         printf ("Inserisci il numeratore:");
         scanf ("%d", &a);
-	printf ("Inserisci il denumeratore:");
+	printf ("Inserisci il denominatore:");
         scanf ("%d", &b);
 
         if(b==0) {                                                 // aggiunta di if b==0
-        printf ("Impossibbile fare una divisione per zero\n");     // aggiunta di printf
+        printf ("Impossibbile dividere per zero\n");               // aggiunta di printf
         }  
 
         else {                                                     // aggiunta di else
@@ -87,8 +87,9 @@ void dividi ()
 
 void ins_string () 
 {
-	char stringa[10];
+	char stringa[100];
         printf ("Inserisci la stringa: ");
-        scanf ("%9s", stringa);                               //modifica da "&stringa" a "stringa"
-        printf("Hai inserito: %s\n", stringa); 
+        scanf  (" %99[^\n]s", stringa);                      //modifica da "&stringa" a "stringa"
+        printf("Hai inserito: %s\n", stringa);               //aggiunta din printf
 }
+
