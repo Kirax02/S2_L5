@@ -1,0 +1,18 @@
+Lorenzo Moro NETRIDERS
+Questo programma è un assistente digitale che puo svolgere varie funzioni: la prima puo svolgere una moltiplicazione, la seconda puo svolgere un divisione e la terza permette di inserire una stringa.
+Modifiche del codice e spiegazione
+Riga 12: puo essere modificata togliendo le parentesi graffe perche non hanno nessuna funzione diventando da {'\0'} a '\0'
+Riga 14: modificata da %d a %c perche la variabile scelta è char quindi un carattere.
+Riga 19, 24, 29: sono delle aggiunte non essenziali ma comode cosi se l utilizzatore digita anche la lettera minuscola il programma continua
+Riga 33, 34: aggiunta di default cosi se l utilizzatore digita un carattere diverso da quelli descritti gli uscira un messaggio e si chiuderà il programma
+Riga 54: modificata da short int a int cosi da comprendere piu numeri nella moltiplicazione
+Riga 56: modificata da %f a %d perche abbiamo dato come variabile int ovvero un numero intero e non float
+Riga 59: modificata per lo stesso discorso della riga 14
+Riga 70: si puo modificare l errore sulla parola denominatore ma non è essenziale
+Riga 73: si aggiunge if(b==0) cosi se si mette lo 0 al denominatore compare un messaggio che dice che non si puo dividere per 0
+Riga 77: si aggiunge else cosi se il denominatore è diverso da 0 si puo eseguire la divisione
+Riga 78: modificata da int divisione a float divisione perchè il risultato puo essere decimale e cambio di operatore da % che calcola il resto in / che calcola la divisione
+riga 80: modificata da %d a %.2f cosi che il risultato venga visualizzato in decimale con 2 numeri dopo la virgola
+Riga 90: si puo modificare da char stringa[10] A char stringa[100] cosi da poter digitare piu caratteri ma non è una modifica essenziale
+Riga 92: modificata da &stringa a stringa si puo toglire la & perche stringa è gia un array e modifica in %99[^\n]s cosi da evitare un baffer overflow e consentire gli spazi tra una parola e l altra
+Riga 93: aggiunta di printf cosi quanto si digita la striga poi viene visualizzata
